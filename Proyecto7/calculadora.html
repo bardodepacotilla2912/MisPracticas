@@ -58,7 +58,7 @@
             <button type="button" class="btn btn-primary form-control rounded-pill" onclick="asignar(3)">3</button>   
             </div>
             <div class="col-3 text-center py-3">
-            <button type="button" class="btn btn-primary form-control rounded-pill" onclick="asignar('X')">X</button>   
+            <button type="button" class="btn btn-primary form-control rounded-pill" onclick="asignar('*')">X</button>   
             </div>
         </div>
         <div class="row">
@@ -69,14 +69,16 @@
             <button type="button" class="btn btn-primary form-control rounded-pill" onclick="asignar('.')">.</button>   
             </div>
             <div class="col-3 text-center py-3">
-            <button type="button" class="btn btn-secondary form-control rounded-pill" onclick="asignar('')">C</button>   
+            <button type="button" class="btn btn-secondary form-control rounded-pill" onclick="limpiar()">C</button>   
             </div>
             <div class="col-3 text-center py-3">
             <button type="button" class="btn btn-warning form-control rounded-pill" onclick="asignar('/')">/</button>   
             </div>
         </div>
         <div class="row">
-            <button type ="button" class="btn btn-warning form-control rounded-pill"></button>
+            <div class="col-6 text-center py-3">
+            <button type ="button" class="btn btn-warning form-control rounded-pill offset-12" onclick="calcular()" > =</button>
+            </div>
         </div>
         
     </div>
