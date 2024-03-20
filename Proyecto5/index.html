@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 5nTemplate Strings</title>
+</head>
+<style>
+    
+</style>
+<body>
+    
+    <h1 id="Lista">Proyecto 5</h1>
+    <p>Este es el proyecto 5</p>
+    <script>
+        let lista = document.getElementById('Lista');
+        let texto = "Hola mi nombre es Angel y acabo de cumplir 19 años";
+
+        console.log(texto);
+
+        console.log(`Hola mi nombre es Angel y acabo de cumplir 19 años`);
+
+        let text = `Cadena miltilinea
+        brown fox
+        jumps over
+        the lazy dog`;
+
+        console.log(text);
+        let a = 5;
+        let b = 10;
+
+        console.log(`El resultado de la suma de ${a} y ${b} es ${a+b}
+
+        el resultado de la resta de ${a} menos ${b} es ${a-b}
+        
+        multiplicado por 2 es ${a*b} y
+
+        dividido entre 2 es ${a/b}`);
+
+        let persona = 'Mike';
+        let edad = 30;
+        function mifuncion(cadenas, personaX, edadExp){
+            let resultado = '';
+            console.log(cadenas);
+            console.log(cadenas[2]);
+
+          //  if(edadExp < 18){
+          //      resultado = 'menor de edad';
+           // }else{
+           //     resultado = 'mayor de edad';
+           // }
+            resultado=  edadExp < 18 ? resultado = 'menor de edad' : resultado = 'mayor de edad';
+            return resultado;
+        }
+
+      
+
+
+        console.log(mifuncion(`Hola `, `Pepe `, 12));
+
+        let resultado2 = mifuncion`Hola ${persona} tienes ${edad} años. `;
+        console.log(resultado2);
+
+        let Titulo = 'Ganadores Oscares';
+
+        let Cantantes = ['Luis Miguel', 'Billie Elish', 'Enrique Iglesias'];
+        
+        let cadenaHTML = `<h1>${Titulo}</h1> `;
+
+        cadenaHTML += `<ul>`;
+
+        for(let cantante of Cantantes){
+            cadenaHTML += `<li>${cantante}</li>`;
+        }
+
+        cadenaHTML += `</ul>`;
+
+        lista.innerHTML = cadenaHTML;
+
+
+
+    </script>
+
+
+
+</body>
+</html>

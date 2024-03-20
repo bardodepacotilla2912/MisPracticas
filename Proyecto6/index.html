@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 6</title>
+</head>
+<body>
+    <h1>Arreglos</h1>
+    <p id="Lista1"></p>
+    <p id="lista2"></p>
+    <p id="lista3"></p>
+    <p id="lista4"></p>
+    <p id="lista5"></p>
+    <p id="lista6"></p>
+    <p id="lista7"></p>
+    <p id="lista8"></p>
+
+
+    <script>
+        const fruits = ['apple', 'banana', 'orange', 'kiwi'];
+        let size = fruits.length;
+        console.log(size);
+
+
+        for (let i = 0; i < size; i++) {
+            console.log(fruits[i]);
+        }
+
+        let lista1 = document.getElementById('Lista1');
+        lista1.innerHTML = 'Hola alberto';
+        console.log('la fruta es: ', fruits);
+        console.warn('la fruta es: ', fruits);
+        console.error('la fruta es: ', fruits);
+        console.info('la fruta es: ', fruits); 
+        console.table(fruits);
+        console.debug('la fruta es: ', fruits);
+
+
+        let lista2 =  document.getElementById('lista2');
+        lista2.innerHTML = fruits.join('-');
+
+        
+
+        //eliminar un elemento del arreglo
+
+        let lista3 = document.getElementById('lista3');
+        fruits.pop(); //elimina el ultimo elemento del arreglo
+        lista3.innerHTML = fruits.join(" *** ");
+
+        let lista4 = document.getElementById('lista4');
+        fruits.push("mango"); //agrega un elemento al final del arreglo
+        fruits.push("fresa"); //agrega un elemento al final del arreglo
+        lista4.innerHTML = fruits.join(" *** ");
+
+        let lista5 = document.getElementById('lista5');
+        fruits.shift(); //elimina el primer elemento del arreglo
+        lista5.innerHTML ="Lista 5" + fruits.join(" --- ");
+
+        lista6 = document.getElementById('lista6');
+        fruits.unshift("melon"); //agrega un elemento al principio del arreglo
+        fruits.unshift("sandia"); //agrega un elemento al principio del arreglo
+        lista6.innerHTML = fruits.join(" === ");
+
+        let lista7 = document.getElementById('lista7');
+        fruits.splice(2, 0, "pera"); //agrega un elemento en la posicion 2 del arreglo
+        lista7.innerHTML = fruits.join(" +++ ");
+
+        const nombresMujeres = ['Ana', 'Maria', 'Sofia', 'Luisa'];  
+        const nombresHombres = ['Pedro', 'Juan', 'Carlos', 'Luis'];
+
+        const listaNombres = nombresMujeres.concat(nombresHombres);
+
+        let lista8 = document.getElementById('lista8');
+        lista8.innerHTML = listaNombres.join(" ____ ");
+
+
+
+
+    </script>
+</body>
+</html>
