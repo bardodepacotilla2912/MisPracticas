@@ -24,8 +24,13 @@ let cuadrado = () => {
     resultado.value = resultado.value * resultado.value;
 }
 
-let Coseno = () => {
-    resultado.value = Math.cos(resultado.value);
+let factorial = () => {
+    let num = resultado.value;
+    let total = 1;
+    for (let i = 1; i <= num; i++) {
+        total = total * i;
+    }
+    resultado.value = total;
 }
 
 
