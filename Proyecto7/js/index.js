@@ -33,5 +33,17 @@ let factorial = () => {
     resultado.value = total;
 }
 
+let LogaritmoNatural = () => {
+    resultado.value = Math.log(resultado.value);
+}
+
+let Cubo = () => {
+    resultado.value = resultado.value * resultado.value * resultado.value;
+}
+
+let Emular = () => {
+    resultado.value = Math.exp(resultado.value);
+}
+
 
 
