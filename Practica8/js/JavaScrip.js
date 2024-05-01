@@ -25,7 +25,7 @@
                     <button class='btn btn-success'>Editar</button>
                 </div>
                 <div class='col-1 border p-3 text-center'>
-                    <button class='btn btn-danger'>Borrar</button>
+                    <button class='btn btn-danger' onClick= "borrarTarea(${ indice })">Borrar</button>
                 </div>
             </div>
             `;
@@ -44,11 +44,36 @@ mostrarTareas();
         mostrarTareas();    
     }
 
+    let cerrarModal  = () => {
+        btnGuardar.setAttribute("data-bs-dismiss", "modal");
+        btnGuardar.click();
+    }
+
+   /* let resetearFormulario = () => {
+        nombre.value = '';
+        fecha.value = '';
+        descripcion.value = '';
+
+    }*/
+
+   
+    let borrarTarea = (indice) => {
+        tareas.splice(indice, 1);
+        console.log(tareas);
+        mostrarTareas();
+    }
+
     formulario.addEventListener('submit', (e) => { //Evento submit
+
         e.preventDefault(); 
         agregarDatos();
+        cerrarModal();
+      //  resetearFormulario();
+      formulario.reset();
+
     
     });
+    borrarTarea(1);
 
 /*
     formulario.addEventListener('submit', (e) => { //Evento submit
@@ -62,3 +87,4 @@ mostrarTareas();
         mostrarTareas();
         formulario.reset();
     });*/
+ 
